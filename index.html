@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .box{
+            width: 100%;
+            height: 100%;
+            background-color: #121212;
+            padding-bottom: 40px;
+            padding-top: 1px;
+        }
+
+        .navMax{
+            display: none;
+        }
+
+        header{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            box-sizing: border-box;
+            z-index: 999;
+        }
+        header>img{
+            width: 100px;
+            height: 100px;
+        }
+
+        .nav{
+            width: 500px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav>a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        .cd{
+            display: none;
+        }
+
+        /*  */
+        .titleH1 {
+            background: linear-gradient(90deg, rgb(228, 135, 29), #59b0d8, #7f2094, #59a5c8, #1ea);
+            background-size: 500% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientAnimation 5s linear infinite;
+            text-align: center;
+            font-size: 108px;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+        /*  */
+
+        .conA{
+            width: 900px;
+            padding: 25px;
+            margin:40px auto;
+            box-shadow: 0 8px 16px 0 rgba(128, 0, 128, 0.6), 0 12px 40px 0 rgba(128, 0, 128, 0.6);
+            font-weight: 400;
+            background-color: black;
+            border-radius: 20px;
+            box-sizing: border-box;
+
+        }
+
+        .titleH3{
+            background: linear-gradient(90deg, rgb(228, 135, 29), #59b0d8, #7f2094, #59a5c8, #1ea);
+            background-size: 500% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientAnimation 5s linear infinite;
+            text-align: center;
+            font-size: 48px;
+        }
+
+
+        .titleP{
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            color: white;
+        }
+
+        .min_conA{
+            margin: 30px 0;
+            width: 100%;
+            padding: 16px;
+            box-sizing: border-box;
+            border-radius: 25px;
+            border: 4px solid purple;
+            background-color: black;
+        }
+
+        .link{
+            color: white;
+            text-align: center;
+        }
+
+        .linkActive{
+            color: purple;
+        }
+
+        /*  */
+        .copyBtn{
+            width: 80px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            background-color: #dc21e2;
+            color: white;
+            margin: 10px auto;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .textP{
+            color: white;
+        }
+
+
+        .conB{
+            width: 400px;
+            padding: 25px;
+            margin:140px auto;
+            box-shadow: 0 8px 16px 0 rgba(128, 0, 128, 0.6), 0 12px 40px 0 rgba(128, 0, 128, 0.6);
+            font-weight: 400;
+            background-color: black;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+
+        .conB p{
+            text-align: center;
+            color: white;
+        }
+
+
+        .conC{
+            width: 800px;
+            padding: 25px;
+            margin:40px auto;
+            box-shadow: 0 8px 16px 0 rgba(128, 0, 128, 0.6), 0 12px 40px 0 rgba(128, 0, 128, 0.6);
+            font-weight: 400;
+            background-color: black;
+            border-radius: 20px;
+            box-sizing: border-box; 
+        }
+
+        .conC p{
+            color: white;
+        }
+
+        .marquee{
+            height: 80px;
+            width: 100%;
+            border-top: 2px solid gray;
+            border-bottom: 2px solid gray;
+        }
+
+        marquee{
+            color: white;
+            width: 100%;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        marquee>h3{
+            background: linear-gradient(90deg, rgb(228, 135, 29), #59b0d8, #7f2094, #59a5c8, #1ea);
+            background-size: 500% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientAnimation 5s linear infinite;
+            text-align: center;
+            font-size: 28px;
+           
+        }
+
+        /*  */
+
+        .imgA{
+            width: 300px;
+            height: 300px;
+            margin:70px auto;
+        }
+        .imgA>img{
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .transparent {
+        color: #ffffff;
+        font-family: 'Pangolin-Regular';
+        text-shadow: 3px 0px 0px #000;
+        text-align: center;
+        font-size: 70px;
+    }
+
+    .fxBtn{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .fxBtn>a{
+        width: 150px;
+        height: 150px;
+        background-color: #131313;
+        margin: 0 20px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .fxBtn>a>img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #countdown{
+        color:white;
+        text-align: center;
+        margin: 20px 0;
+        background: linear-gradient(90deg, rgb(228, 135, 29), #59b0d8, #7f2094, #59a5c8, #1ea);
+        background-size: 500% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientAnimation 5s linear infinite;
+            text-align: center;
+            font-size: 28px;
+    }
+
+    @media (max-width: 500px){
+        .nav{
+            display: none;
+        }
+
+        header>img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .cd{
+            display: block;
+            width: 40px;
+            height: 40px;
+
+        }
+
+        .titleH1{
+            font-size: 70px;
+            margin-top: 50px;
+        }
+
+        .imgA {
+            width: 200px;
+            height: 200px;
+            margin: 0px auto;
+        }
+
+        .conA{
+            width: 85%;
+            position: relative;
+            min-height: 650px;
+
+        }
+
+        .conB{
+            width: 90%;
+
+        }
+
+        .min_conA{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+            width: 110%;
+        }
+
+        .conC{
+            width: 90%;
+
+        }
+
+        .linkActive{
+            font-size: 11px;
+        }
+        .titleH3{
+            font-size: 36px;
+        }
+
+        .titleP{
+            text-align: center;
+            margin: 30px 0;
+
+
+        }
+
+        .textP {
+            color: white;
+            font-size: 15px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .conC p{
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .marquee{
+            margin-bottom: 50px;
+        }
+
+        .transparent{
+            font-size: 35px;
+        }
+
+        .transparentA{
+            margin-top: 30px;
+        }
+
+        .transparentB{
+            margin-bottom: 30px;
+        }
+
+
+        .fxBtn>a{
+            width: 50px;
+            height: 50px;
+        }
+
+        .fxBtn{
+            height: 50%;
+        }
+
+        .box{
+            padding-top: 10px;
+        }
+
+        .titleH1 {
+            font-size: 70px;
+            margin-top: 120px;
+        }
+
+        header{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+
+        .navMax{
+            width: 80%;
+            height: 350px;
+            background-color: #181716;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: 1;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px 0 50px;
+            box-sizing: border-box;
+            transition: all 1s linear;
+            transform: translate(-50%,-100%);
+
+            
+        }
+
+        .navMax>a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .titlePA{
+            font-size: 11px;
+        }
+    }
+
+
+    /*  */
+
+</style>
+</head>
+<body>
+    <div class="box">
+        <header>
+            <img src="./img/logo.png" alt="" srcset="">
+            <div class="nav">
+                <a href="">Presale</a>
+                <a href="">Contract</a>
+                <a href="">About</a>
+                <a href="">Follow Us</a>
+            </div>
+            <img class="cd" src="./img/cd.png" alt="" srcset="">
+        </header>
+        <div class="navMax">
+            <a href="#A">Presale</a>
+            <a href="#B">Contract</a>
+            <a href="#C">About</a>
+            <a href="#D">Follow Us</a>
+            
+        </div>
+
+
+        <h1 class="titleH1">KOALA</h1>
+        <div class="imgA">
+            <img src="./img/A1.png" alt="" srcset="">
+        </div>
+        <div class="conA" id="A">
+            <h3 class="titleH3">Presale</h3>
+            <p id="countdown">
+                <!--  -->
+            </p>
+            <div class="min_conA">
+                <div class="link">
+                    <span>Presale Address:</span>
+                    <span class="linkActive" id="myDiv">HDHxV3SX9idA4Mg5msXBY6FTyisHJAEapiNLRCPEQx44</span>
+                </div>
+                <div class="copyBtn">
+                    Copy
+                </div>
+                <p class="textP">
+                    We are special koalas, living in eucalyptus jungle. We abide by the spirit of harmony and respect the laws of nature! We are Solana's special memes, coexisting in this universe. This is our home, and koalas are with nature.</p>
+                <p class="textP">
+                    We now start the pre-sale phase: Single wallet pre-sale amount 0.5-50solana The pre-sale limit is 10,000 solana, or if any conditions are met, the pre-sale will stop immediately. Tokenomics: 45% LP 45% Pre-sale 10% airdrop
+                </p>
+            </div>
+
+
+           
+        </div>
+
+        <div class="conB" id="B">
+            <h3 class="titleH3">Contract</h3>
+            <p class="titlePA">Es6mwhYiHqTH25ET2R8Gv3utoPbZRxy9Y3fsPSE7cReT</p>
+            
+        </div>
+
+        <div class="conC" id="C">
+            <h3 class="titleH3">About</h3>
+            <p>There was a koala named "Ken 'ola" who lived alone in the forest. He always feels lonely and helpless. He has no friends and eats eucalyptus leaves by himself every day.</p>
+            <p>One day, Ken 'ola saw the other animals playing together, and he was very envious that he tried to approach them, but was always rejected.
+                Ken 'ola felt so useless that he began to wonder if he was really fit to live in the forest.</p>
+            <p>However, Ken 'ola did not give up on it and continued to try hard to make friends. Finally, one of the sloths noticed Ken 'ola's loneliness and went over to greet her. Ken 'ola was so happy that he and the sloth became good friends.</p>
+            <p>Since then, Ken Aoola no longer feels lonely it understands that even if there will be difficulties and setbacks in life, as long as you don't give up, you will always find your own happiness. All right, baby! Grandma wants you to know that no matter what the difficulties, just like Aurora, just keep going and believe that happiness will come. Go to sleep!</p>
+        
+        </div>
+
+        <div class="marquee" >
+            <marquee behavior="scroll" direction="" scrollamount="30">
+                <h3>Join the KOALA Telegram now and follow us on Twitter! Enjoy numerous benefits including random
+                    airdrops, giveaways, and the chance to be a part of a thriving memecoin community...</h3>
+            </marquee>
+        </div>
+
+        <div class="imgA" id="D">
+            <img src="./img/A2.png" alt="" srcset="">
+        </div>
+        <h2 class="transparent transparentA">Follow Us</h2>
+        <h2 class="transparent transparentB">ON SOCIAL MEDIA</h2>
+
+        <div class="fxBtn">
+            <a href="https://twitter.com/koalacoin888">
+                <img src="./img/twitter-2.png" alt="" srcset="">
+            </a>
+            <a href="https://t.me/+aut3HftFebVhMTk1">
+                <img src="./img/telegram-2.png" alt="" srcset="">
+            </a>
+        </div>
+      
+    </div>
+
+    <script>
+        const copyBtn = document.querySelector('.copyBtn')
+        const cd = document.querySelector('.cd')
+        const navMax = document.querySelector('.navMax')
+        const navMaxAll = document.querySelectorAll('.navMax>a')
+        let imgSrcA = './img/cloes.png'
+        let imgSrcB = './img/cd.png'
+        let flag = true
+        cd.addEventListener('click',function(){
+            flag = !flag
+            cd.src = flag ? imgSrcB : imgSrcA;
+
+            if (flag == false) {
+                navMax.style.transform = 'translate(-50%,0%)'
+            }else{
+                navMax.style.transform = 'translate(-50%,-100%)'
+            }
+            
+        });
+
+        for (let i = 0; i < navMaxAll.length; i++) {
+            navMaxAll[i].addEventListener('click',function(){
+                console.log('ww');
+                navMax.style.transform = 'translate(-50%,-100%)'
+                flag = true
+                cd.src = imgSrcB
+
+            })
+            
+        }
+
+      
+
+        copyBtn.addEventListener('click',function(){
+
+            let textToCopy = document.getElementById("myDiv").innerText;
+            let tempInput = document.createElement("input");
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+        })
+
+        // 
+           // 设置目标倒计时时间（可以根据需要修改）
+           let countDownDate = new Date("Mar 30, 2024 00:00:00").getTime();
+            let x = setInterval(function() {
+                let now = new Date().getTime();
+                let distance = countDownDate - now;
+                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+    </script>
+</body>
+</html>
